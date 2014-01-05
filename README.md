@@ -33,7 +33,7 @@ Windows you need:
 $ gem install bundler
 ```
 
-## Install
+## Prepare
 
 To install all dependencies, bundle the project:
 

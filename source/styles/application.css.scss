@@ -128,11 +128,9 @@ a {
 #navigation, #subnavigation {
   position: absolute;
   font-weight: bold;
-  top: 0;
+  top: -25px;
 
   ul {
-    position: relative;
-    top: -25px;
     padding: 0px;
     margin: auto;
 
@@ -151,7 +149,7 @@ a {
 
 #subnavigation {
   position: absolute;
-  top: 310px;
+  top: 285px;
   left: 0;
   width: 730px;
 }

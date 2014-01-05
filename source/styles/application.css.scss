@@ -1,0 +1,304 @@
+/*
+*= require_tree ./plugins
+*= require_self
+*/
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 960px;
+}
+
+.boxer {
+  margin-top: 20px;
+  margin-bottom: 75px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  border: 8px solid white;
+  width: 730px;
+  height: 200px;
+
+  img {
+    border-radius: 16px;
+  }
+}
+
+body {
+  margin: 0px;
+  background-color: #e6f5e9;
+  color: #3a9f34;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: arial, sans-serif;
+}
+
+#header {
+  width: 730px;
+  height: 140px;
+  margin: auto;
+
+  img {
+    float: left;
+    margin-top: 31px;
+  }
+
+  p {
+    color: black;
+    float: left;
+    padding-left: 40px;
+    padding-top: 32px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+h1, h2 {
+  color: #3a9f34;
+}
+
+.home h1 {
+  left: 65px;
+  position: relative;
+}
+
+a {
+  color: #3a9f34;
+  text-decoration: none;
+
+  &:hover {
+    color: #eaa110;
+  }
+}
+
+#galleries {
+  font-weight: bold;
+
+  ul {
+    position: absolute;
+    top: 6px;
+    left: -291px;
+
+    li {
+      text-align: right;
+      margin-bottom: 20px;
+      clear: both;
+      display: block;
+      width: 240px;
+    }
+
+    a {
+      color: #3a9f34;
+    }
+
+    li.current {
+      a {
+        color: #eaa110;
+      }
+
+      ul {
+        position: absolute;
+        top: 45px;
+        left: 0px;
+
+        li {
+          text-align: right;
+          margin-bottom: 20px;
+          clear: both;
+          display: block;
+          width: 240px;
+        }
+
+        a {
+          color: #3a9f34;
+        }
+
+        li.current a {
+          color: #eaa110;
+        }
+      }
+    }
+  }
+}
+
+#navigation, #subnavigation {
+  position: absolute;
+  font-weight: bold;
+  top: 0;
+
+  ul {
+    position: relative;
+    top: -25px;
+    padding: 0px;
+    margin: auto;
+
+    li {
+      float: left;
+      display: inline;
+      list-style-type: none;
+      margin: 0px 40px 0px 0px;
+
+      a.current {
+        color: #eaa110;
+      }
+    }
+  }
+}
+
+#subnavigation {
+  position: absolute;
+  top: 310px;
+  left: 0;
+  width: 730px;
+}
+
+#page {
+  -webkit-box-shadow: inset 0px 0px 1px 0px black;
+  box-shadow: inset 0px 0px 1px 0px black;
+  min-height: 400px;
+  background-color: white;
+
+  #content {
+    position: relative;
+    overflow: visible;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 730px;
+    margin: auto;
+    min-height: 400px;
+    font-size: 16px;
+    color: black;
+    padding-top: 16px;
+    padding-bottom: 80px;
+
+    p {
+      line-height: 22px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      .description {
+        width: 240px;
+        float: left;
+        height: 330px;
+
+        .title {
+          width: 200px;
+          text-align: center;
+          margin-top: -10px;
+        }
+
+        .thumb {
+          height: 250px;
+          width: 200px;
+          overflow: visible;
+          border-radius: 10px;
+          -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+          border: 8px solid white;
+
+          img {
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .container {
+        position: relative;
+        width: 240px;
+        float: left;
+        height: 285px;
+
+        .thumb {
+          height: 250px;
+          width: 200px;
+          overflow: visible;
+          border-radius: 10px;
+          -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+          border: 8px solid white;
+
+          img {
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  position: relative;
+  overflow: visible;
+  width: 730px;
+  margin: auto;
+  font-size: 12px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+  a {
+    color: #3a9f34;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin-top: 50px;
+    padding-right: 200px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .contact {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 16px;
+
+    span {
+      padding: 0 10px;
+
+      &:first-child {
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+
+  #logo {
+    width: 150px;
+    height: 150px;
+    background-image: url(/images/baumnatur.png);
+    float: right;
+    margin-top: -77px;
+  }
+}
+
+#cc {
+  float: right;
+  padding: 75px 0 25px 0;
+
+  a[rel='license'] {
+    padding-left: 15px;
+  }
+}
+
+.rslides {
+  width: 730px;
+  height: 410px;
+  margin: auto;
+  margin-bottom: 100px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  border: 8px solid white;
+
+  img {
+    border-radius: 16px;
+  }
+}

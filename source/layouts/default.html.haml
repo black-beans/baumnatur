@@ -1,0 +1,81 @@
+!!! Strict
+%html{xmlns: "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %meta{content: "Michael Kessler - www.mksoft.ch", name: "developer"}/
+    %meta{content: "width=960, initial-scale=0.8", name: "viewport"}/
+    %title= "BaumNatur - Information, Beratung und Ausführung rund um die Baumpflege - #{ data.page.title }"
+    %meta{content: "Ihr Spezialist für die Baumpflege", name: "description"}/
+    %meta{content: "Baumpflege, Baumschnittmassnahmen, Kronensicherungssysteme,  Spezialfällungen", name: "keywords"}/
+
+    = stylesheet_link_tag 'application'
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28632657-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  %body
+    #header
+      %a{ href: '/' }
+        %img{alt: "BaumNatur", height: "35", src: "/images/baumnatur.jpg", width: "250"}/
+      %p Ihr Spezialist für die Baumpflege.
+
+    #page
+      #content
+        #navigation
+          %ul
+            %li
+              = nav_link 'Home', '/index.html'
+            %li
+              = nav_link 'Angebot', '/angebot.html'
+            %li
+              = nav_link 'Info', '/info.html'
+            %li
+              = nav_link 'Unsere Firma', '/unsere-firma.html'
+            %li
+              = nav_link 'Impressionen', '/impressionen.html'
+            %li
+              = nav_link 'Links', '/links.html'
+
+        - if current_resource.url.start_with?('/angebot')
+          #subnavigation
+            %ul
+              %li
+                = nav_link 'Baumpflege', '/angebot/baumpflege.html'
+              %li
+                = nav_link 'Baumfällungen', '/angebot/baumfaellungen.html'
+              %li
+                = nav_link 'Wurzelstrunk entfernen', '/angebot/wurzelstrunk-entfernen.html'
+              %li
+                = nav_link 'Landschaftspflege', '/angebot/landschaftspflege.html'
+
+        = yield
+
+    #footer
+      #logo  
+      %p
+        Information, Beratung und Ausführung
+      %p.contact
+        %span> •
+        079 797 50 46
+        %span •
+        %a{href: "mailto:burkart@baumnatur.ch"} burkart@baumnatur.ch
+      #cc
+        Dieses
+        %span{href: "http://purl.org/dc/dcmitype/Text", rel: "dc:type", "xmlns:dc" => "http://purl.org/dc/elements/1.1/"} Werk
+        ist unter einer
+        %a{href: "http://creativecommons.org/licenses/by-nc-sa/2.5/ch/"} Creative Commons-Lizenz
+        lizenziert.
+        %a{href: "http://creativecommons.org/licenses/by-nc-sa/2.5/ch/", rel: "license"}
+          %img{alt: "Creative Commons License", src: "http://i.creativecommons.org/l/by-nc-sa/2.5/ch/88x31.png", style: "border-width:0"}/
+
+    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", type: "text/javascript"}
+
+    = javascript_include_tag 'application'
